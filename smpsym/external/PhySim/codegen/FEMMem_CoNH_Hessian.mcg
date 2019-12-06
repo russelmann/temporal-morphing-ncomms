@@ -1,0 +1,143 @@
+		double t1 = 0.1E1*lame2;
+		double t2 = Fv[3]*Fv[3];
+		double t3 = Fv[5]*Fv[5];
+		double t4 = t2+t3;
+		double t6 = Fv[0]*Fv[0];
+		double t9 = Fv[0]*Fv[1];
+		double t10 = Fv[2]*Fv[3];
+		double t13 = Fv[4]*Fv[5];
+		double t16 = Fv[1]*Fv[1];
+		double t17 = Fv[2]*Fv[2];
+		double t19 = Fv[4]*Fv[4];
+		double t25 = -2.0*t10*t13-2.0*t9*t10-2.0*t9*t13+t16*t17+t16*t19+t17*t3+t2*t19+t6
+*t2+t3*t6;
+		double t26 = 1/t25;
+		double t31 = Fv[1]*Fv[2];
+		double t33 = Fv[1]*Fv[4];
+		double t35 = Fv[0]*t2+Fv[0]*t3-t31*Fv[3]-t33*Fv[5];
+		double t36 = 4.0*t35*t35;
+		double t38 = t25*t25;
+		double t39 = 1/t38;
+		double t45 = log(t25);
+		double t46 = lame1*t45;
+		double t54 = -t10-t13;
+		double t58 = 2.0*lame2*t35;
+		double t59 = Fv[0]*Fv[2];
+		double t61 = Fv[0]*Fv[4];
+		double t65 = Fv[1]*t17+Fv[1]*t19-t59*Fv[3]-t61*Fv[5];
+		double t66 = 2.0*t39*t65;
+		double t70 = 2.0*t39*t35;
+		double t79 = -lame2*t54*t26+t58*t66/2.0+0.5*lame1*t65*t70+0.5*t46*t54*t26-0.5*
+t46*t70*t65;
+		double t80 = lame2*Fv[1];
+		double t86 = Fv[3]*Fv[4];
+		double t88 = t16*Fv[2]+Fv[2]*t3-t86*Fv[5]-t9*Fv[3];
+		double t89 = 2.0*t39*t88;
+		double t92 = 2.0*lame1*t88;
+		double t102 = t80*Fv[3]*t26+t58*t89/2.0+0.25*t92*t70-0.5*t46*Fv[1]*Fv[3]*t26-0.5
+*t46*t70*t88;
+		double t103 = Fv[0]*Fv[3];
+		double t106 = 4.0*t103-2.0*t31;
+		double t112 = Fv[2]*Fv[4];
+		double t115 = -t112*Fv[5]+Fv[3]*t19+t6*Fv[3]-t9*Fv[2];
+		double t116 = 2.0*t39*t115;
+		double t119 = 2.0*lame1*t115;
+		double t128 = -lame2*t106*t26/2.0+t58*t116/2.0+0.25*t119*t70+0.25*t46*t106*t26
+-0.5*t46*t70*t115;
+		double t129 = Fv[5]*t26;
+		double t135 = -t10*Fv[5]+t16*Fv[4]+t2*Fv[4]-t9*Fv[5];
+		double t136 = 2.0*t39*t135;
+		double t139 = 2.0*lame1*t135;
+		double t149 = t80*t129+t58*t136/2.0+0.25*t139*t70-0.5*t46*Fv[1]*Fv[5]*t26-0.5*
+t46*t70*t135;
+		double t150 = Fv[0]*Fv[5];
+		double t153 = 4.0*t150-2.0*t33;
+		double t161 = -t10*Fv[4]+t17*Fv[5]+t6*Fv[5]-t9*Fv[4];
+		double t162 = 2.0*t39*t161;
+		double t165 = 2.0*lame1*t161;
+		double t174 = -lame2*t153*t26/2.0+t58*t162/2.0+0.25*t165*t70+0.25*t46*t153*t26
+-0.5*t46*t70*t161;
+		double t175 = t17+t19;
+		double t179 = 4.0*t65*t65;
+		double t195 = -2.0*t103+4.0*t31;
+		double t199 = 2.0*lame2*t65;
+		double t210 = -lame2*t195*t26/2.0+t199*t89/2.0+0.25*t92*t66+0.25*t46*t195*t26
+-0.5*t46*t66*t88;
+		double t211 = lame2*Fv[0];
+		double t224 = t211*Fv[2]*t26+t199*t116/2.0+0.25*t119*t66-0.5*t46*t59*t26-0.5*t46
+*t66*t115;
+		double t227 = -2.0*t150+4.0*t33;
+		double t241 = -lame2*t227*t26/2.0+t199*t136/2.0+0.25*t139*t66+0.25*t46*t227*t26
+-0.5*t46*t66*t135;
+		double t242 = Fv[4]*t26;
+		double t254 = t211*t242+t199*t162/2.0+0.25*t165*t66-0.5*t46*t61*t26-0.5*t46*t66*
+t161;
+		double t255 = t16+t3;
+		double t259 = 4.0*t88*t88;
+		double t273 = -t9-t13;
+		double t277 = 2.0*lame2*t88;
+		double t288 = -lame2*t273*t26+t277*t116/2.0+0.25*t119*t89+0.5*t46*t273*t26-0.5*
+t46*t89*t115;
+		double t302 = lame2*Fv[3]*t129+t277*t136/2.0+0.25*t139*t89-0.5*t46*Fv[3]*Fv[5]*
+t26-0.5*t46*t89*t135;
+		double t303 = Fv[2]*Fv[5];
+		double t306 = 4.0*t303-2.0*t86;
+		double t320 = -lame2*t306*t26/2.0+t277*t162/2.0+0.25*t165*t89+0.25*t46*t306*t26
+-0.5*t46*t89*t161;
+		double t321 = t6+t19;
+		double t325 = 4.0*t115*t115;
+		double t341 = -2.0*t303+4.0*t86;
+		double t345 = 2.0*lame2*t115;
+		double t356 = -lame2*t341*t26/2.0+t345*t136/2.0+0.25*t139*t116+0.25*t46*t341*t26
+-0.5*t46*t116*t135;
+		double t369 = lame2*Fv[2]*t242+t345*t162/2.0+0.25*t165*t116-0.5*t46*t112*t26-0.5
+*t46*t116*t161;
+		double t370 = t16+t2;
+		double t374 = 4.0*t135*t135;
+		double t388 = -t9-t10;
+		double t403 = -lame2*t388*t26+lame2*t135*t162+0.25*t165*t136+0.5*t46*t388*t26
+-0.5*t46*t136*t161;
+		double t404 = t6+t17;
+		double t408 = 4.0*t161*t161;
+      mHx[0][0] = t1-lame2*t4*t26+lame2*t36*t39/2.0+0.25*lame1*t36*t39+0.5*t46*
+t4*t26-0.25*t46*t36*t39;
+      mHx[0][1] = t79;
+      mHx[0][2] = t102;
+      mHx[0][3] = t128;
+      mHx[0][4] = t149;
+      mHx[0][5] = t174;
+      mHx[1][0] = t79;
+      mHx[1][1] = t1-lame2*t175*t26+lame2*t179*t39/2.0+0.25*lame1*t179*t39+0.5*
+t46*t175*t26-0.25*t46*t179*t39;
+      mHx[1][2] = t210;
+      mHx[1][3] = t224;
+      mHx[1][4] = t241;
+      mHx[1][5] = t254;
+      mHx[2][0] = t102;
+      mHx[2][1] = t210;
+      mHx[2][2] = t1-lame2*t255*t26+lame2*t259*t39/2.0+0.25*lame1*t259*t39+0.5*
+t46*t255*t26-0.25*t46*t259*t39;
+      mHx[2][3] = t288;
+      mHx[2][4] = t302;
+      mHx[2][5] = t320;
+      mHx[3][0] = t128;
+      mHx[3][1] = t224;
+      mHx[3][2] = t288;
+      mHx[3][3] = t1-lame2*t321*t26+lame2*t325*t39/2.0+0.25*lame1*t325*t39+0.5*
+t46*t321*t26-0.25*t46*t325*t39;
+      mHx[3][4] = t356;
+      mHx[3][5] = t369;
+      mHx[4][0] = t149;
+      mHx[4][1] = t241;
+      mHx[4][2] = t302;
+      mHx[4][3] = t356;
+      mHx[4][4] = t1-lame2*t370*t26+lame2*t374*t39/2.0+0.25*lame1*t374*t39+0.5*
+t46*t370*t26-0.25*t46*t374*t39;
+      mHx[4][5] = t403;
+      mHx[5][0] = t174;
+      mHx[5][1] = t254;
+      mHx[5][2] = t320;
+      mHx[5][3] = t369;
+      mHx[5][4] = t403;
+      mHx[5][5] = t1-lame2*t404*t26+lame2*t408*t39/2.0+0.25*lame1*t408*t39+0.5*
+t46*t404*t26-0.25*t46*t408*t39;

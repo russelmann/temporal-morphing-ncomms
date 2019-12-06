@@ -1,0 +1,20 @@
+{
+    "smp_options": {
+        "base radius": 2.0,
+        "base thickness": 2.0,
+        "base indent": 0.30000001192092898,
+        "bracket width": 1.0,
+        "minimal gap": 0.0,
+        "minimal bumper": 0.10000000149011612,
+        "membrane stretch factor": 3.0,
+        "membrane shear modulus": 0.7200000286102295,
+        "membrane thickness": 0.5,
+        "scissor": 0.10000000149011612,
+        "default print options": {
+            "markers": true,
+            "alignment diameter": 0.75,
+            "handle": -1,
+            "alignment": true
+        }
+    }
+}

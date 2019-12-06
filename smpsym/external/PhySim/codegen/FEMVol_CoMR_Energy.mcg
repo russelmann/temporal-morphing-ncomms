@@ -1,0 +1,22 @@
+		double t1 = Fv[0]*Fv[0];
+		double t2 = Fv[1]*Fv[1];
+		double t3 = Fv[2]*Fv[2];
+		double t4 = Fv[3]*Fv[3];
+		double t5 = Fv[4]*Fv[4];
+		double t6 = Fv[5]*Fv[5];
+		double t7 = Fv[6]*Fv[6];
+		double t8 = Fv[7]*Fv[7];
+		double t9 = Fv[8]*Fv[8];
+		double t13 = pow(t1+t2+t3+t4+t5+t6+t7+t8+t9,2.0);
+		double t15 = pow(t1+t4+t7,2.0);
+		double t20 = pow(Fv[0]*Fv[1]+Fv[3]*Fv[4]+Fv[7]*Fv[6],2.0);
+		double t26 = pow(Fv[0]*Fv[2]+Fv[3]*Fv[5]+Fv[8]*Fv[6],2.0);
+		double t29 = pow(t2+t5+t8,2.0);
+		double t34 = pow(Fv[1]*Fv[2]+Fv[4]*Fv[5]+Fv[7]*Fv[8],2.0);
+		double t37 = pow(t3+t6+t9,2.0);
+		double t55 = pow(Fv[0]*Fv[8]*Fv[4]-Fv[0]*Fv[7]*Fv[5]-Fv[1]*Fv[3]*Fv[8]+Fv[1]*Fv
+[6]*Fv[5]+Fv[2]*Fv[3]*Fv[7]-Fv[2]*Fv[4]*Fv[6],2.0);
+		double t56 = log(t55);
+		double t58 = t56*t56;
+		double t61 = mr10*(t1+t2+t3+t4+t5+t6+t7+t8+t9-0.3E1)+mr01*(t13-t15-2.0*t20-2.0*
+t26-t29-2.0*t34-t37-0.3E1)-(mr10+2.0*mr01)*t56+0.125*bulk*t58;

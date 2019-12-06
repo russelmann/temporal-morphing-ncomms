@@ -1,0 +1,11 @@
+		double t2 = pow(x2[0]-x1[0],2.0);
+		double t4 = pow(x2[1]-x1[1],2.0);
+		double t6 = pow(x2[2]-x1[2],2.0);
+		double t8 = sqrt(t2+t4+t6);
+		double t9 = L0-t8;
+		double t11 = t9*t9;
+		double t13 = t11*t9;
+		double t15 = t11*t11;
+		double t23 = t15*t15;
+		double t25 = t15*t11*vC[6]+t15*t13*vC[7]+t15*t9*vC[5]+t11*vC[2]+t13*vC[3]+t15*vC
+[4]+t23*vC[8]+t9*vC[1]+vC[0];

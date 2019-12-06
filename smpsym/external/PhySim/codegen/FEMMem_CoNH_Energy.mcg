@@ -1,0 +1,13 @@
+		double t1 = Fv[0]*Fv[0];
+		double t2 = Fv[1]*Fv[1];
+		double t3 = Fv[2]*Fv[2];
+		double t4 = Fv[3]*Fv[3];
+		double t5 = Fv[4]*Fv[4];
+		double t6 = Fv[5]*Fv[5];
+		double t12 = Fv[0]*Fv[1];
+		double t13 = Fv[2]*Fv[3];
+		double t16 = Fv[4]*Fv[5];
+		double t26 = log(t1*t4+t1*t6-2.0*t12*t13-2.0*t12*t16-2.0*t13*t16+t2*t3+t2*t5+t3*
+t6+t4*t5);
+		double t29 = t26*t26;
+		double t32 = 0.5*lame2*(t1+t2+t3+t4+t5+t6-2.0)-lame2*t26/2.0+0.125*lame1*t29;

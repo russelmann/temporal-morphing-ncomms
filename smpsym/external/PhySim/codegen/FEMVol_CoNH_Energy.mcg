@@ -1,0 +1,15 @@
+		double t1 = Fv[0]*Fv[0];
+		double t2 = Fv[1]*Fv[1];
+		double t3 = Fv[2]*Fv[2];
+		double t4 = Fv[3]*Fv[3];
+		double t5 = Fv[4]*Fv[4];
+		double t6 = Fv[5]*Fv[5];
+		double t7 = Fv[6]*Fv[6];
+		double t8 = Fv[7]*Fv[7];
+		double t9 = Fv[8]*Fv[8];
+		double t23 = pow(Fv[0]*Fv[8]*Fv[4]-Fv[0]*Fv[7]*Fv[5]-Fv[1]*Fv[3]*Fv[8]+Fv[1]*Fv
+[6]*Fv[5]+Fv[2]*Fv[3]*Fv[7]-Fv[2]*Fv[4]*Fv[6],2.0);
+		double t24 = log(t23);
+		double t25 = t1+t2+t3+t4+t5+t6+t7+t8+t9-3.0-t24;
+		double t28 = t24*t24;
+		double t31 = lame2*t25/2.0+lame1*t28/8.0;

@@ -1,0 +1,11 @@
+		double t1 = Fv[0]*Fv[0];
+		double t2 = Fv[1]*Fv[1];
+		double t3 = Fv[2]*Fv[2];
+		double t4 = Fv[3]*Fv[3];
+		double t5 = Fv[4]*Fv[4];
+		double t6 = Fv[5]*Fv[5];
+		double t9 = Fv[0]*Fv[1];
+		double t10 = Fv[2]*Fv[3];
+		double t13 = Fv[4]*Fv[5];
+		double t26 = 0.5*lame2*(t1+t2+t3+t4+t5+t6+1/(t1*t4+t1*t6-2.0*t10*t13-2.0*t9*t10
+-2.0*t9*t13+t2*t3+t2*t5+t3*t6+t4*t5)-3.0);

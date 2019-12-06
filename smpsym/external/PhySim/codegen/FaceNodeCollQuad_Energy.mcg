@@ -1,0 +1,24 @@
+		double t2 = x1[0]-x0[0];
+		double t3 = t2*t2;
+		double t4 = x1[1]-x0[1];
+		double t5 = t4*t4;
+		double t6 = x1[2]-x0[2];
+		double t7 = t6*t6;
+		double t9 = sqrt(t3+t5+t7);
+		double t10 = 1/t9;
+		double t11 = t10*t4;
+		double t12 = x2[0]-x0[0];
+		double t13 = t12*t12;
+		double t14 = x2[1]-x0[1];
+		double t15 = t14*t14;
+		double t16 = x2[2]-x0[2];
+		double t17 = t16*t16;
+		double t19 = sqrt(t13+t15+t17);
+		double t20 = 1/t19;
+		double t21 = t20*t16;
+		double t24 = t10*t6;
+		double t25 = t20*t14;
+		double t31 = t10*t2;
+		double t34 = t20*t12;
+		double t47 = K*(T-(x3[0]-x0[0])*(0.1E1*t11*t21-0.1E1*t24*t25)-(x3[1]-x0[1])*(
+-0.1E1*t31*t21+0.1E1*t24*t34)-(x3[2]-x0[2])*(0.1E1*t31*t25-0.1E1*t11*t34));

@@ -1,0 +1,5 @@
+CMakeLocal.txt
+build/
+lib/
+release/
+debug/

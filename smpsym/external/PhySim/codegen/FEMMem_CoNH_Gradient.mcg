@@ -1,0 +1,26 @@
+		double t3 = Fv[3]*Fv[3];
+		double t5 = Fv[5]*Fv[5];
+		double t11 = -Fv[1]*Fv[2]*Fv[3]-Fv[1]*Fv[4]*Fv[5]+Fv[0]*t3+Fv[0]*t5;
+		double t13 = Fv[0]*Fv[0];
+		double t16 = Fv[0]*Fv[1];
+		double t17 = Fv[2]*Fv[3];
+		double t20 = Fv[4]*Fv[5];
+		double t23 = Fv[1]*Fv[1];
+		double t24 = Fv[2]*Fv[2];
+		double t26 = Fv[4]*Fv[4];
+		double t32 = t13*t3+t13*t5-2.0*t16*t17-2.0*t16*t20-2.0*t17*t20+t23*t24+t23*t26+
+t24*t5+t3*t26;
+		double t33 = 1/t32;
+		double t36 = log(t32);
+		double t37 = lame1*t36;
+		double t50 = -Fv[0]*Fv[2]*Fv[3]-Fv[0]*Fv[4]*Fv[5]+Fv[1]*t24+Fv[1]*t26;
+		double t65 = -Fv[3]*Fv[4]*Fv[5]-t16*Fv[3]+t23*Fv[2]+Fv[2]*t5;
+		double t80 = -Fv[2]*Fv[4]*Fv[5]+t13*Fv[3]-t16*Fv[2]+Fv[3]*t26;
+		double t94 = -t16*Fv[5]-t17*Fv[5]+t23*Fv[4]+t3*Fv[4];
+		double t108 = t13*Fv[5]-t16*Fv[4]-t17*Fv[4]+t24*Fv[5];
+      vgx[0] = 0.1E1*lame2*Fv[0]-lame2*t11*t33+0.5*t37*t11*t33;
+      vgx[1] = 0.1E1*lame2*Fv[1]-lame2*t50*t33+0.5*t37*t50*t33;
+      vgx[2] = 0.1E1*lame2*Fv[2]-lame2*t65*t33+0.5*t37*t65*t33;
+      vgx[3] = 0.1E1*lame2*Fv[3]-lame2*t80*t33+0.5*t37*t80*t33;
+      vgx[4] = 0.1E1*lame2*Fv[4]-lame2*t94*t33+0.5*t37*t94*t33;
+      vgx[5] = 0.1E1*lame2*Fv[5]-lame2*t108*t33+0.5*t37*t108*t33;

@@ -1,0 +1,15 @@
+		double t1 = x2[0]-x1[0];
+		double t2 = t1*t1;
+		double t3 = x2[1]-x1[1];
+		double t4 = t3*t3;
+		double t5 = x2[2]-x1[2];
+		double t6 = t5*t5;
+		double t8 = sqrt(t2+t4+t6);
+		double t12 = K*(t8/L0-1.0);
+		double t13 = 1/t8;
+      vgx[0] = -0.1E1*t12*t13*t1;
+      vgx[1] = -0.1E1*t12*t13*t3;
+      vgx[2] = -0.1E1*t12*t13*t5;
+      vgx[3] = 0.1E1*t12*t13*t1;
+      vgx[4] = 0.1E1*t12*t13*t3;
+      vgx[5] = 0.1E1*t12*t13*t5;

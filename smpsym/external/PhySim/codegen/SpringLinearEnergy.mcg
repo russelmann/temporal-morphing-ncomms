@@ -1,0 +1,6 @@
+		double t2 = pow(x2[0]-x1[0],2.0);
+		double t4 = pow(x2[1]-x1[1],2.0);
+		double t6 = pow(x2[2]-x1[2],2.0);
+		double t8 = sqrt(t2+t4+t6);
+		double t12 = pow(t8/L0-1.0,2.0);
+		double t15 = 0.5*K*t12*L0;

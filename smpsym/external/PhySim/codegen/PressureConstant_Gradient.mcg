@@ -1,0 +1,15 @@
+		double t1 = x1[1]-x0[1];
+		double t2 = x2[2]-x0[2];
+		double t4 = x2[1]-x0[1];
+		double t5 = x1[2]-x0[2];
+		double t9 = P*(t1*t2-t4*t5)/6.0;
+		double t12 = x0[0]+x1[0]+x2[0];
+      vgx[0] = -t9;
+      vgx[1] = -P*(-x2[2]+x1[2])*t12/6.0;
+      vgx[2] = -P*(-x1[1]+x2[1])*t12/6.0;
+      vgx[3] = -t9;
+      vgx[4] = -P*t2*t12/6.0;
+      vgx[5] = P*t4*t12/6.0;
+      vgx[6] = -t9;
+      vgx[7] = P*t5*t12/6.0;
+      vgx[8] = -P*t1*t12/6.0;

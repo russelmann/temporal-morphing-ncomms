@@ -1,0 +1,469 @@
+		double t1 = BHi[0][0]*Nx[0][0];
+		double t3 = BHi[2][0]*Nx[0][2];
+		double t4 = BHi[3][0]*Nx[0][3];
+		double t5 = BHi[1][0]*Nx[0][1]+t1+t3+t4;
+		double t9 = BHi[2][1]*Nx[0][2];
+		double t10 = BHi[3][1]*Nx[0][3];
+		double t11 = BHi[0][1]*Nx[0][0]+BHi[1][1]*Nx[0][1]+t10+t9;
+		double t15 = BHi[2][2]*Nx[0][2];
+		double t16 = BHi[3][2]*Nx[0][3];
+		double t17 = BHi[0][2]*Nx[0][0]+BHi[1][2]*Nx[0][1]+t15+t16;
+		double t19 = t1*Nx[1][1];
+		double t20 = BHi[2][2]*Nx[2][2];
+		double t21 = t20*BHi[1][1];
+		double t23 = t1*Nx[1][2];
+		double t25 = Nx[2][1]*BHi[2][2]*BHi[1][1];
+		double t27 = BHi[0][0]*Nx[0][1];
+		double t28 = t27*Nx[1][0];
+		double t30 = t27*Nx[2][0];
+		double t31 = BHi[2][2]*Nx[1][2];
+		double t34 = BHi[0][0]*Nx[0][2];
+		double t35 = t34*Nx[1][0];
+		double t37 = t34*Nx[1][1];
+		double t41 = t1*Nx[2][3];
+		double t45 = t1*Nx[2][1];
+		double t46 = BHi[3][2]*Nx[1][3];
+		double t47 = t46*BHi[1][1];
+		double t49 = BHi[3][2]*Nx[2][3];
+		double t53 = BHi[0][0]*Nx[0][3];
+		double t54 = t53*Nx[1][0];
+		double t55 = Nx[2][1]*BHi[3][2];
+		double t58 = t53*Nx[1][1];
+		double t59 = Nx[2][0]*BHi[3][2];
+		double t62 = BHi[2][1]*Nx[2][2];
+		double t63 = t62*BHi[1][2];
+		double t66 = Nx[2][1]*BHi[2][1]*BHi[1][2];
+		double t69 = BHi[2][1]*Nx[1][2];
+		double t76 = -t37*Nx[2][0]*BHi[2][2]*BHi[1][1]+t37*Nx[2][0]*BHi[2][1]*BHi[1][2]+
+t41*Nx[1][1]*BHi[3][2]*BHi[1][1]-t28*t49*BHi[1][1]+t30*t31*BHi[1][1]-t30*t69*
+BHi[1][2]+t54*t55*BHi[1][1]-t58*t59*BHi[1][1]+t19*t21-t19*t63-t28*t21-t23*t25+
+t23*t66+t35*t25+t28*t63+t30*t47-t35*t66-t45*t47;
+		double t80 = BHi[3][1]*Nx[1][3];
+		double t81 = t80*BHi[1][2];
+		double t83 = BHi[3][1]*Nx[2][3];
+		double t87 = Nx[2][1]*BHi[3][1];
+		double t90 = Nx[2][0]*BHi[3][1];
+		double t96 = t1*Nx[2][2];
+		double t99 = BHi[0][0]*Nx[1][0];
+		double t100 = t99*Nx[2][3];
+		double t101 = Nx[0][2]*BHi[3][2];
+		double t102 = t101*BHi[2][1];
+		double t104 = BHi[0][0]*Nx[2][0];
+		double t105 = t104*Nx[1][3];
+		double t108 = Nx[2][2]*BHi[3][2]*BHi[2][1];
+		double t110 = t53*Nx[1][2];
+		double t118 = Nx[0][2]*BHi[3][1];
+		double t119 = t118*BHi[2][2];
+		double t123 = Nx[2][2]*BHi[3][1]*BHi[2][2];
+		double t127 = -t41*Nx[1][1]*BHi[3][1]*BHi[1][2]+t41*Nx[1][2]*BHi[3][2]*BHi[2][1]
+-t41*Nx[1][2]*BHi[3][1]*BHi[2][2]-t110*t59*BHi[2][1]+t110*t90*BHi[2][2]+t28*t83
+*BHi[1][2]-t96*t46*BHi[2][1]-t54*t87*BHi[1][2]+t58*t90*BHi[1][2]+t96*t80*BHi[2]
+[2]-t100*t102+t100*t119+t105*t102-t105*t119+t54*t108-t54*t123-t30*t81+t45*t81;
+		double t129 = BHi[0][1]*BHi[1][0];
+		double t130 = t129*Nx[0][0];
+		double t131 = Nx[2][2]*Nx[1][1];
+		double t132 = t131*BHi[2][2];
+		double t134 = Nx[1][2]*Nx[2][1];
+		double t135 = t134*BHi[2][2];
+		double t137 = t129*Nx[0][1];
+		double t138 = Nx[2][2]*Nx[1][0];
+		double t139 = t138*BHi[2][2];
+		double t141 = Nx[1][2]*Nx[2][0];
+		double t142 = t141*BHi[2][2];
+		double t144 = t129*Nx[0][2];
+		double t145 = Nx[2][1]*Nx[1][0];
+		double t146 = t145*BHi[2][2];
+		double t148 = Nx[1][1]*Nx[2][0];
+		double t149 = t148*BHi[2][2];
+		double t151 = Nx[2][3]*Nx[1][1];
+		double t152 = t151*BHi[3][2];
+		double t154 = Nx[1][3]*Nx[2][1];
+		double t155 = t154*BHi[3][2];
+		double t157 = Nx[2][3]*Nx[1][0];
+		double t158 = t157*BHi[3][2];
+		double t160 = Nx[1][3]*Nx[2][0];
+		double t161 = t160*BHi[3][2];
+		double t163 = t129*Nx[0][3];
+		double t164 = t145*BHi[3][2];
+		double t166 = t148*BHi[3][2];
+		double t168 = BHi[0][1]*BHi[2][0];
+		double t169 = t168*Nx[0][0];
+		double t174 = t168*Nx[0][1];
+		double t179 = t168*Nx[0][2];
+		double t180 = t145*BHi[1][2];
+		double t182 = t148*BHi[1][2];
+		double t184 = t169*t131*BHi[1][2]-t169*t134*BHi[1][2]-t174*t138*BHi[1][2]+t174*
+t141*BHi[1][2]-t130*t132+t130*t135-t130*t152+t130*t155+t137*t139-t137*t142+t137
+*t158-t137*t161-t144*t146+t144*t149-t163*t164+t163*t166+t179*t180-t179*t182;
+		double t185 = BHi[0][1]*BHi[3][0];
+		double t186 = t185*Nx[0][0];
+		double t191 = t185*Nx[0][1];
+		double t196 = t185*Nx[0][3];
+		double t199 = Nx[2][3]*Nx[1][2];
+		double t200 = t199*BHi[3][2];
+		double t202 = Nx[1][3]*Nx[2][2];
+		double t203 = t202*BHi[3][2];
+		double t206 = Nx[2][3]*Nx[0][2];
+		double t207 = t206*BHi[3][2];
+		double t210 = Nx[1][3]*Nx[0][2];
+		double t211 = t210*BHi[3][2];
+		double t213 = t168*Nx[0][3];
+		double t214 = t138*BHi[3][2];
+		double t216 = t141*BHi[3][2];
+		double t226 = t210*BHi[2][2];
+		double t230 = -t185*Nx[1][0]*t206*BHi[2][2]+t186*t151*BHi[1][2]-t186*t154*BHi[1]
+[2]-t191*t157*BHi[1][2]+t191*t160*BHi[1][2]+t168*Nx[1][0]*t207-t168*Nx[2][0]*
+t211+t185*Nx[2][0]*t226+t186*t199*BHi[2][2]-t186*t202*BHi[2][2]+t196*t139-t196*
+t142-t169*t200+t169*t203+t196*t180-t196*t182-t213*t214+t213*t216;
+		double t233 = BHi[0][2]*BHi[1][0];
+		double t234 = t233*Nx[0][0];
+		double t235 = t131*BHi[2][1];
+		double t237 = t134*BHi[2][1];
+		double t239 = t233*Nx[0][1];
+		double t240 = t138*BHi[2][1];
+		double t242 = t141*BHi[2][1];
+		double t244 = t233*Nx[0][2];
+		double t245 = t145*BHi[2][1];
+		double t247 = t148*BHi[2][1];
+		double t249 = t151*BHi[3][1];
+		double t251 = t154*BHi[3][1];
+		double t253 = t157*BHi[3][1];
+		double t255 = t160*BHi[3][1];
+		double t257 = t233*Nx[0][3];
+		double t258 = t145*BHi[3][1];
+		double t260 = t148*BHi[3][1];
+		double t262 = BHi[0][2]*BHi[1][1];
+		double t263 = t262*BHi[2][0];
+		double t270 = Nx[0][1]*Nx[1][0];
+		double t273 = Nx[0][1]*Nx[2][0];
+		double t279 = Nx[0][2]*Nx[1][1];
+		double t282 = -t263*Nx[0][0]*Nx[1][1]*Nx[2][2]+t263*Nx[0][0]*Nx[1][2]*Nx[2][1]-
+t263*Nx[0][2]*Nx[1][0]*Nx[2][1]+t263*t270*Nx[2][2]-t263*t273*Nx[1][2]+t263*t279
+*Nx[2][0]+t234*t235-t234*t237+t234*t249-t234*t251-t239*t240+t239*t242-t239*t253
++t239*t255+t244*t245-t244*t247+t257*t258-t257*t260;
+		double t283 = t262*BHi[3][0];
+		double t284 = Nx[0][0]*Nx[2][3];
+		double t294 = Nx[0][3]*Nx[1][0];
+		double t297 = Nx[0][3]*Nx[1][1];
+		double t300 = BHi[0][2]*BHi[2][0];
+		double t301 = t300*Nx[0][0];
+		double t302 = t199*BHi[3][1];
+		double t304 = t202*BHi[3][1];
+		double t307 = t206*BHi[3][1];
+		double t310 = t210*BHi[3][1];
+		double t312 = t300*Nx[0][3];
+		double t313 = t138*BHi[3][1];
+		double t315 = t141*BHi[3][1];
+		double t317 = BHi[0][2]*BHi[2][1];
+		double t318 = t317*BHi[3][0];
+		double t330 = Nx[0][3]*Nx[1][2];
+		double t333 = t283*Nx[0][0]*Nx[2][1]*Nx[1][3]+t318*Nx[0][0]*Nx[2][2]*Nx[1][3]+
+t318*t157*Nx[0][2]-t318*t160*Nx[0][2]+t283*t270*Nx[2][3]-t283*t273*Nx[1][3]-
+t283*t284*Nx[1][1]-t283*t294*Nx[2][1]+t283*t297*Nx[2][0]-t318*t284*Nx[1][2]-
+t318*t294*Nx[2][2]-t300*Nx[1][0]*t307+t300*Nx[2][0]*t310+t318*t330*Nx[2][0]+
+t301*t302-t301*t304+t312*t313-t312*t315;
+		double t335 = BHi[1][0]*Nx[2][3];
+		double t336 = t335*Nx[1][2];
+		double t337 = Nx[0][1]*BHi[3][2];
+		double t338 = t337*BHi[2][1];
+		double t341 = BHi[1][0]*Nx[2][2]*Nx[1][3];
+		double t343 = t335*Nx[1][1];
+		double t345 = BHi[1][0]*Nx[2][1];
+		double t346 = t345*Nx[1][3];
+		double t348 = BHi[1][0]*Nx[0][3];
+		double t349 = t348*Nx[1][1];
+		double t351 = t348*Nx[1][2];
+		double t354 = Nx[0][1]*BHi[3][1];
+		double t355 = t354*BHi[2][2];
+		double t363 = BHi[1][1]*BHi[2][0];
+		double t364 = t363*Nx[2][3];
+		double t365 = Nx[1][2]*Nx[0][1];
+		double t366 = t365*BHi[3][2];
+		double t369 = Nx[1][3]*Nx[0][1];
+		double t370 = t369*BHi[3][2];
+		double t372 = t279*BHi[3][2];
+		double t376 = t363*Nx[0][3];
+		double t377 = t131*BHi[3][2];
+		double t379 = t134*BHi[3][2];
+		double t381 = -t363*Nx[2][1]*t211-t351*t55*BHi[2][1]+t351*t87*BHi[2][2]+t363*Nx
+[2][2]*t370-t343*t102+t346*t102+t349*t108+t343*t119-t346*t119-t349*t123+t336*
+t338-t336*t355-t338*t341+t341*t355-t364*t366+t364*t372-t376*t377+t376*t379;
+		double t382 = BHi[1][1]*BHi[3][0];
+		double t383 = t382*Nx[2][3];
+		double t384 = t365*BHi[2][2];
+		double t389 = t279*BHi[2][2];
+		double t393 = t382*Nx[0][3];
+		double t396 = BHi[1][2]*BHi[2][0];
+		double t397 = t396*Nx[2][3];
+		double t398 = t365*BHi[3][1];
+		double t401 = t369*BHi[3][1];
+		double t403 = t279*BHi[3][1];
+		double t407 = t396*Nx[0][3];
+		double t408 = t131*BHi[3][1];
+		double t410 = t134*BHi[3][1];
+		double t412 = BHi[1][2]*BHi[2][1];
+		double t413 = t412*BHi[3][0];
+		double t426 = -t382*Nx[2][2]*t369*BHi[2][2]+t413*t151*Nx[0][2]-t413*t154*Nx[0]
+[2]-t413*t199*Nx[0][1]+t413*t202*Nx[0][1]+t382*Nx[2][1]*t226-t413*t297*Nx[2][2]
++t396*Nx[2][1]*t310+t413*t330*Nx[2][1]-t396*Nx[2][2]*t401+t393*t132-t393*t135+
+t383*t384-t383*t389+t397*t398-t397*t403+t407*t408-t407*t410;
+		double t429 = t76+t127+t184+t230+t282+t333+t381+t426;
+		double t430 = 1/t429;
+		double t431 = BHi[0][0]*BHi[1][1];
+		double t436 = BHi[0][0]*BHi[1][2];
+		double t441 = BHi[0][0]*BHi[2][1];
+		double t444 = BHi[0][0]*BHi[2][2];
+		double t451 = BHi[0][1]*BHi[1][2];
+		double t452 = BHi[2][0]*Nx[1][1];
+		double t453 = t452*Nx[2][2];
+		double t455 = BHi[2][0]*Nx[1][2];
+		double t456 = t455*Nx[2][1];
+		double t458 = -t129*t132+t129*t135-t129*t152+t129*t155+t431*t132-t431*t135+t431*
+t152-t431*t155+t441*t200-t441*t203-t436*t235+t436*t237-t436*t249+t436*t251-t444
+*t302+t444*t304+t451*t453-t451*t456;
+		double t459 = BHi[3][0]*Nx[1][1];
+		double t460 = t459*Nx[2][3];
+		double t462 = BHi[3][0]*Nx[1][3];
+		double t463 = t462*Nx[2][1];
+		double t467 = BHi[0][1]*BHi[2][2];
+		double t468 = BHi[3][0]*Nx[1][2];
+		double t469 = t468*Nx[2][3];
+		double t471 = t462*Nx[2][2];
+		double t485 = -t168*t200+t168*t203+t233*t235-t233*t237+t233*t249-t233*t251-t262*
+t453+t262*t456-t262*t460+t262*t463+t300*t302-t300*t304-t317*t469+t317*t471+t451
+*t460-t451*t463+t467*t469-t467*t471;
+		double t487 = t430*(t458+t485);
+		double t490 = t429*t429;
+		double t491 = log(t490);
+		double t492 = lame1*t491;
+		double t497 = BHi[1][0]*Nx[1][1]+t455+t462+t99;
+		double t501 = BHi[0][1]*Nx[1][0]+BHi[1][1]*Nx[1][1]+t69+t80;
+		double t505 = BHi[0][2]*Nx[1][0]+BHi[1][2]*Nx[1][1]+t31+t46;
+		double t507 = BHi[2][2]*Nx[0][1];
+		double t508 = t507*Nx[2][2];
+		double t510 = t15*Nx[2][1];
+		double t512 = t337*Nx[2][3];
+		double t514 = t16*Nx[2][1];
+		double t516 = BHi[2][1]*Nx[0][1];
+		double t517 = t516*Nx[2][2];
+		double t519 = t9*Nx[2][1];
+		double t521 = t354*Nx[2][3];
+		double t523 = t10*Nx[2][1];
+		double t526 = t16*Nx[2][2];
+		double t529 = t10*Nx[2][2];
+		double t535 = BHi[2][0]*Nx[0][1];
+		double t536 = t535*Nx[2][2];
+		double t538 = t3*Nx[2][1];
+		double t540 = t129*t508-t129*t510+t129*t512-t129*t514-t441*t207+t444*t307-t431*
+t508+t431*t510-t431*t512+t431*t514+t436*t517-t436*t519+t436*t521-t436*t523+t441
+*t526-t444*t529-t451*t536+t451*t538;
+		double t541 = BHi[3][0]*Nx[0][1];
+		double t542 = t541*Nx[2][3];
+		double t544 = t4*Nx[2][1];
+		double t548 = BHi[3][0]*Nx[0][2];
+		double t549 = t548*Nx[2][3];
+		double t551 = t4*Nx[2][2];
+		double t565 = t168*t207-t168*t526-t233*t517+t233*t519-t233*t521+t233*t523+t262*
+t536-t262*t538+t262*t542-t262*t544-t300*t307+t300*t529+t317*t549-t317*t551-t451
+*t542+t451*t544-t467*t549+t467*t551;
+		double t567 = t430*(t540+t565);
+		double t575 = BHi[2][0]*Nx[2][2]+BHi[3][0]*Nx[2][3]+t104+t345;
+		double t579 = BHi[0][1]*Nx[2][0]+BHi[1][1]*Nx[2][1]+t62+t83;
+		double t583 = BHi[0][2]*Nx[2][0]+BHi[1][2]*Nx[2][1]+t20+t49;
+		double t588 = t16*Nx[1][1];
+		double t590 = t516*Nx[1][2];
+		double t592 = t9*Nx[1][1];
+		double t595 = t10*Nx[1][1];
+		double t598 = t16*Nx[1][2];
+		double t601 = t10*Nx[1][2];
+		double t607 = t535*Nx[1][2];
+		double t609 = t3*Nx[1][1];
+		double t611 = -t129*t370-t129*t384+t129*t389+t129*t588+t441*t211-t444*t310+t431*
+t370+t431*t384-t431*t389-t436*t401-t431*t588-t436*t590+t436*t592+t436*t595-t441
+*t598+t444*t601+t451*t607-t451*t609;
+		double t612 = t541*Nx[1][3];
+		double t614 = t4*Nx[1][1];
+		double t618 = t548*Nx[1][3];
+		double t620 = t4*Nx[1][2];
+		double t634 = -t168*t211+t168*t598+t233*t401+t233*t590-t233*t592-t233*t595-t262*
+t607+t262*t609-t262*t612+t262*t614+t300*t310-t300*t601-t317*t618+t317*t620+t451
+*t612-t451*t614+t467*t618-t467*t620;
+		double t636 = t430*(t611+t634);
+		double t657 = Nx[1][0]*BHi[2][0];
+		double t658 = t657*Nx[2][2];
+		double t660 = t455*Nx[2][0];
+		double t662 = BHi[3][0]*Nx[1][0];
+		double t663 = t662*Nx[2][3];
+		double t665 = t462*Nx[2][0];
+		double t669 = t129*t139-t129*t142+t129*t158-t129*t161-t431*t139+t431*t142-t431*
+t158+t431*t161-t233*t240+t233*t242+t436*t240-t436*t242+t436*t253-t436*t255-t451
+*t658+t451*t660-t451*t663+t451*t665;
+		double t676 = BHi[1][0]*BHi[2][1];
+		double t679 = BHi[1][0]*BHi[2][2];
+		double t684 = BHi[1][1]*BHi[2][2];
+		double t691 = -t363*t200+t676*t200+t363*t203-t676*t203-t233*t253+t233*t255+t262*
+t658-t262*t660+t262*t663-t262*t665+t396*t302-t679*t302-t396*t304+t679*t304-t412
+*t469+t412*t471+t684*t469-t684*t471;
+		double t693 = t430*(t669+t691);
+		double t702 = BHi[2][2]*Nx[0][0];
+		double t703 = t702*Nx[2][2];
+		double t705 = t15*Nx[2][0];
+		double t707 = BHi[3][2]*Nx[0][0];
+		double t708 = t707*Nx[2][3];
+		double t710 = t16*Nx[2][0];
+		double t712 = BHi[2][1]*Nx[0][0];
+		double t713 = t712*Nx[2][2];
+		double t715 = t9*Nx[2][0];
+		double t717 = BHi[3][1]*Nx[0][0];
+		double t718 = t717*Nx[2][3];
+		double t720 = t10*Nx[2][0];
+		double t726 = BHi[2][0]*Nx[0][0];
+		double t727 = t726*Nx[2][2];
+		double t729 = t3*Nx[2][0];
+		double t731 = BHi[3][0]*Nx[0][0];
+		double t732 = t731*Nx[2][3];
+		double t734 = t4*Nx[2][0];
+		double t738 = -t129*t703+t129*t705-t129*t708+t129*t710+t233*t713-t233*t715+t431*
+t703-t431*t705+t431*t708-t431*t710-t436*t713+t436*t715-t436*t718+t436*t720+t451
+*t727-t451*t729+t451*t732-t451*t734;
+		double t757 = t363*t207-t676*t207+t233*t718-t233*t720-t262*t727+t262*t729-t262*
+t732+t262*t734-t396*t307+t679*t307-t363*t526+t396*t529+t412*t549-t412*t551+t676
+*t526-t679*t529-t684*t549+t684*t551;
+		double t759 = t430*(t738+t757);
+		double t768 = t702*Nx[1][2];
+		double t770 = t15*Nx[1][0];
+		double t772 = t707*Nx[1][3];
+		double t774 = t16*Nx[1][0];
+		double t776 = t712*Nx[1][2];
+		double t778 = t9*Nx[1][0];
+		double t780 = t717*Nx[1][3];
+		double t782 = t10*Nx[1][0];
+		double t788 = t726*Nx[1][2];
+		double t790 = t3*Nx[1][0];
+		double t792 = t731*Nx[1][3];
+		double t794 = t4*Nx[1][0];
+		double t798 = t129*t768-t129*t770+t129*t772-t129*t774-t233*t776+t233*t778-t431*
+t768+t431*t770-t431*t772+t431*t774+t436*t776-t436*t778+t436*t780-t436*t782-t451
+*t788+t451*t790-t451*t792+t451*t794;
+		double t817 = -t363*t211+t676*t211-t233*t780+t233*t782+t262*t788-t262*t790+t262*
+t792-t262*t794+t396*t310-t679*t310+t363*t598-t396*t601-t412*t618+t412*t620-t676
+*t598+t679*t601+t684*t618-t684*t620;
+		double t819 = t430*(t798+t817);
+		double t838 = t657*Nx[2][1];
+		double t840 = t452*Nx[2][0];
+		double t848 = -t129*t146+t129*t149+t431*t146-t431*t149+t168*t158-t441*t158-t168*
+t161+t441*t161+t233*t245-t233*t247-t436*t245+t436*t247+t444*t253-t444*t255+t451
+*t838-t451*t840-t467*t663+t467*t665;
+		double t867 = t363*t152-t676*t152-t363*t155+t676*t155-t396*t249+t679*t249+t396*
+t251-t679*t251-t300*t253+t300*t255-t262*t838+t262*t840+t317*t663-t317*t665+t412
+*t460-t412*t463-t684*t460+t684*t463;
+		double t869 = t430*(t848+t867);
+		double t878 = t702*Nx[2][1];
+		double t880 = t507*Nx[2][0];
+		double t882 = t712*Nx[2][1];
+		double t884 = t516*Nx[2][0];
+		double t892 = t726*Nx[2][1];
+		double t894 = t535*Nx[2][0];
+		double t902 = t129*t878-t129*t880-t168*t708+t168*t710-t233*t882+t233*t884-t431*
+t878+t431*t880+t436*t882-t436*t884+t441*t708-t441*t710-t444*t718+t444*t720-t451
+*t892+t451*t894+t467*t732-t467*t734;
+		double t921 = t262*t892-t262*t894+t300*t718-t300*t720-t317*t732+t317*t734-t363*
+t512+t363*t514+t396*t521-t396*t523-t412*t542+t412*t544+t676*t512-t676*t514-t679
+*t521+t679*t523+t684*t542-t684*t544;
+		double t923 = t430*(t902+t921);
+		double t932 = t702*Nx[1][1];
+		double t934 = t507*Nx[1][0];
+		double t936 = t712*Nx[1][1];
+		double t938 = t516*Nx[1][0];
+		double t946 = t726*Nx[1][1];
+		double t948 = t535*Nx[1][0];
+		double t956 = -t129*t932+t129*t934+t168*t772-t168*t774+t233*t936-t233*t938+t431*
+t932-t431*t934-t436*t936+t436*t938-t441*t772+t441*t774+t444*t780-t444*t782+t451
+*t946-t451*t948-t467*t792+t467*t794;
+		double t975 = -t262*t946+t262*t948-t300*t780+t300*t782+t317*t792-t317*t794+t363*
+t370-t363*t588-t676*t370-t396*t401+t396*t595+t679*t401+t412*t612-t412*t614+t676
+*t588-t679*t595-t684*t612+t684*t614;
+		double t977 = t430*(t956+t975);
+		double t996 = t662*Nx[2][1];
+		double t998 = t459*Nx[2][0];
+		double t1002 = t662*Nx[2][2];
+		double t1004 = t468*Nx[2][0];
+		double t1008 = t467*t1002-t467*t1004-t129*t164+t129*t166+t431*t164-t431*t166-
+t168*t214+t168*t216+t441*t214-t441*t216+t233*t258-t233*t260-t436*t258+t436*t260
+-t444*t313+t444*t315+t451*t996-t451*t998;
+		double t1021 = t459*Nx[2][2];
+		double t1023 = t468*Nx[2][1];
+		double t1029 = -t317*t1002+t317*t1004-t412*t1021+t684*t1021+t412*t1023-t684*
+t1023-t262*t996+t262*t998+t300*t313-t300*t315-t363*t377+t363*t379+t676*t377-
+t676*t379+t396*t408-t396*t410-t679*t408+t679*t410;
+		double t1031 = t430*(t1008+t1029);
+		double t1040 = t707*Nx[2][1];
+		double t1042 = t337*Nx[2][0];
+		double t1044 = t717*Nx[2][1];
+		double t1046 = t354*Nx[2][0];
+		double t1048 = t707*Nx[2][2];
+		double t1050 = t101*Nx[2][0];
+		double t1052 = t717*Nx[2][2];
+		double t1054 = t118*Nx[2][0];
+		double t1058 = t731*Nx[2][1];
+		double t1060 = t541*Nx[2][0];
+		double t1064 = t731*Nx[2][2];
+		double t1066 = t548*Nx[2][0];
+		double t1070 = t129*t1040-t431*t1040-t129*t1042+t431*t1042-t233*t1044+t436*t1044
++t233*t1046-t436*t1046+t168*t1048-t441*t1048-t168*t1050+t441*t1050+t444*t1052-
+t444*t1054-t451*t1058+t451*t1060-t467*t1064+t467*t1066;
+		double t1077 = t337*Nx[2][2];
+		double t1079 = t101*Nx[2][1];
+		double t1081 = t354*Nx[2][2];
+		double t1083 = t118*Nx[2][1];
+		double t1087 = t541*Nx[2][2];
+		double t1089 = t548*Nx[2][1];
+		double t1095 = -t300*t1052+t300*t1054+t262*t1058-t262*t1060+t317*t1064-t317*
+t1066+t363*t1077-t676*t1077-t363*t1079+t676*t1079-t396*t1081+t679*t1081+t396*
+t1083-t679*t1083+t412*t1087-t684*t1087-t412*t1089+t684*t1089;
+		double t1097 = t430*(t1070+t1095);
+		double t1106 = t707*Nx[1][1];
+		double t1108 = t337*Nx[1][0];
+		double t1110 = t717*Nx[1][1];
+		double t1112 = t354*Nx[1][0];
+		double t1114 = t707*Nx[1][2];
+		double t1116 = t101*Nx[1][0];
+		double t1118 = t717*Nx[1][2];
+		double t1120 = t118*Nx[1][0];
+		double t1124 = t731*Nx[1][1];
+		double t1126 = t541*Nx[1][0];
+		double t1130 = t731*Nx[1][2];
+		double t1132 = t548*Nx[1][0];
+		double t1136 = -t129*t1106+t431*t1106+t129*t1108-t431*t1108+t233*t1110-t436*
+t1110-t233*t1112+t436*t1112-t168*t1114+t441*t1114+t168*t1116-t441*t1116-t444*
+t1118+t444*t1120+t451*t1124-t451*t1126+t467*t1130-t467*t1132;
+		double t1149 = t541*Nx[1][2];
+		double t1151 = t548*Nx[1][1];
+		double t1157 = t300*t1118-t300*t1120-t262*t1124+t262*t1126-t317*t1130+t317*t1132
+-t412*t1149+t684*t1149+t412*t1151-t684*t1151-t363*t366+t363*t372+t676*t366-t676
+*t372+t396*t398-t396*t403-t679*t398+t679*t403;
+		double t1159 = t430*(t1136+t1157);
+      vgx[0] = (2.0*lame2*(t11*BHi[0][1]+t17*BHi[0][2]+t5*BHi[0][0]-t487)+t492*
+t487)*V0/2.0;
+      vgx[1] = (2.0*lame2*(t497*BHi[0][0]+t501*BHi[0][1]+t505*BHi[0][2]-t567)+
+t492*t567)*V0/2.0;
+      vgx[2] = (2.0*lame2*(t575*BHi[0][0]+t579*BHi[0][1]+t583*BHi[0][2]-t636)+
+t492*t636)*V0/2.0;
+      vgx[3] = (2.0*lame2*(t11*BHi[1][1]+t17*BHi[1][2]+t5*BHi[1][0]-t693)+t492*
+t693)*V0/2.0;
+      vgx[4] = (2.0*lame2*(t497*BHi[1][0]+t501*BHi[1][1]+t505*BHi[1][2]-t759)+
+t492*t759)*V0/2.0;
+      vgx[5] = (2.0*lame2*(t575*BHi[1][0]+t579*BHi[1][1]+t583*BHi[1][2]-t819)+
+t492*t819)*V0/2.0;
+      vgx[6] = (2.0*lame2*(t11*BHi[2][1]+t17*BHi[2][2]+t5*BHi[2][0]-t869)+t492*
+t869)*V0/2.0;
+      vgx[7] = (2.0*lame2*(t497*BHi[2][0]+t501*BHi[2][1]+t505*BHi[2][2]-t923)+
+t492*t923)*V0/2.0;
+      vgx[8] = (2.0*lame2*(t575*BHi[2][0]+t579*BHi[2][1]+t583*BHi[2][2]-t977)+
+t492*t977)*V0/2.0;
+      vgx[9] = (2.0*lame2*(t11*BHi[3][1]+t17*BHi[3][2]+t5*BHi[3][0]-t1031)+t492
+*t1031)*V0/2.0;
+      vgx[10] = (2.0*lame2*(t497*BHi[3][0]+t501*BHi[3][1]+t505*BHi[3][2]-t1097)
++t492*t1097)*V0/2.0;
+      vgx[11] = (2.0*lame2*(t575*BHi[3][0]+t579*BHi[3][1]+t583*BHi[3][2]-t1159)
++t492*t1159)*V0/2.0;

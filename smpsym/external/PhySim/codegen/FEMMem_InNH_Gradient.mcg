@@ -1,0 +1,24 @@
+		double t2 = Fv[0]*Fv[0];
+		double t3 = Fv[3]*Fv[3];
+		double t5 = Fv[5]*Fv[5];
+		double t7 = Fv[0]*Fv[1];
+		double t8 = Fv[2]*Fv[3];
+		double t11 = Fv[4]*Fv[5];
+		double t14 = Fv[1]*Fv[1];
+		double t15 = Fv[2]*Fv[2];
+		double t17 = Fv[4]*Fv[4];
+		double t24 = pow(-2.0*t7*t11-2.0*t8*t11+t14*t15+t14*t17+t15*t5+t3*t17+t2*t3+t2*
+t5-2.0*t7*t8,2.0);
+		double t25 = 1/t24;
+      vgx[0] = 0.5*lame2*(2.0*Fv[0]-2.0*t25*(-Fv[1]*Fv[2]*Fv[3]-Fv[1]*Fv[4]*Fv
+[5]+Fv[0]*t3+Fv[0]*t5));
+      vgx[1] = 0.5*lame2*(2.0*Fv[1]-2.0*t25*(-Fv[0]*Fv[2]*Fv[3]-Fv[0]*Fv[4]*Fv
+[5]+Fv[1]*t15+Fv[1]*t17));
+      vgx[2] = 0.5*lame2*(2.0*Fv[2]-2.0*t25*(-Fv[3]*Fv[4]*Fv[5]+t14*Fv[2]+Fv[2]
+*t5-t7*Fv[3]));
+      vgx[3] = 0.5*lame2*(2.0*Fv[3]-2.0*t25*(-Fv[2]*Fv[4]*Fv[5]+Fv[3]*t17+t2*Fv
+[3]-t7*Fv[2]));
+      vgx[4] = 0.5*lame2*(2.0*Fv[4]-2.0*t25*(t14*Fv[4]+t3*Fv[4]-t7*Fv[5]-t8*Fv
+[5]));
+      vgx[5] = 0.5*lame2*(2.0*Fv[5]-2.0*t25*(t15*Fv[5]+t2*Fv[5]-t7*Fv[4]-t8*Fv
+[4]));

@@ -1,0 +1,15 @@
+	//double t4 = rot[0];
+	//double t1 = t4 * t4;
+	//double t9 = rot[1];
+	//double t2 = t9 * t9;
+	//double t11 = rot[2];
+	//double t3 = t11 * t11;
+	//double t5 = sqrt(t1 + t2 + t3);
+	//double t6 = t5 / 0.2e1;
+	//double t7 = cos(t6);
+	//double t8 = sin(t6);
+	//double t10 = t8 / t5;
+	//qu[0] = t7;
+	//qu[1] = t10 * t4;
+	//qu[2] = t10 * t9;
+	//qu[3] = t10 * t11;

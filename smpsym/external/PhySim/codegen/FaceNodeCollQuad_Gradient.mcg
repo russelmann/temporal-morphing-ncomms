@@ -1,0 +1,108 @@
+		double t1 = x1[0]-x0[0];
+		double t2 = t1*t1;
+		double t3 = x1[1]-x0[1];
+		double t4 = t3*t3;
+		double t5 = x1[2]-x0[2];
+		double t6 = t5*t5;
+		double t7 = t2+t4+t6;
+		double t8 = sqrt(t7);
+		double t9 = 1/t8;
+		double t10 = t9*t3;
+		double t11 = x2[0]-x0[0];
+		double t12 = t11*t11;
+		double t13 = x2[1]-x0[1];
+		double t14 = t13*t13;
+		double t15 = x2[2]-x0[2];
+		double t16 = t15*t15;
+		double t17 = t12+t14+t16;
+		double t18 = sqrt(t17);
+		double t19 = 1/t18;
+		double t20 = t19*t15;
+		double t22 = 0.1E1*t10*t20;
+		double t23 = t9*t5;
+		double t24 = t19*t13;
+		double t26 = 0.1E1*t23*t24;
+		double t27 = x3[0]-x0[0];
+		double t29 = 1/t8/t7;
+		double t30 = t29*t3;
+		double t31 = -2.0*t20*t1;
+		double t35 = 1/t18/t17;
+		double t36 = t35*t15;
+		double t37 = -2.0*t36*t11;
+		double t40 = t29*t5;
+		double t41 = -2.0*t24*t1;
+		double t44 = t35*t13;
+		double t45 = -2.0*t44*t11;
+		double t50 = x3[1]-x0[1];
+		double t51 = t29*t1;
+		double t54 = t9*t19;
+		double t56 = 0.1E1*t54*t15;
+		double t57 = t9*t1;
+		double t60 = t19*t11;
+		double t61 = -2.0*t60*t1;
+		double t64 = t35*t11;
+		double t65 = -2.0*t64*t11;
+		double t69 = 0.1E1*t23*t19;
+		double t72 = x3[2]-x0[2];
+		double t76 = 0.1E1*t54*t13;
+		double t84 = 0.1E1*t10*t19;
+		double t89 = -2.0*t20*t3;
+		double t92 = -2.0*t36*t13;
+		double t95 = -2.0*t24*t3;
+		double t98 = -2.0*t44*t13;
+		double t104 = 0.1E1*t57*t20;
+		double t106 = 0.1E1*t23*t60;
+		double t111 = -2.0*t60*t3;
+		double t114 = -2.0*t64*t13;
+		double t124 = 0.1E1*t57*t19;
+		double t128 = 0.1E1*t54*t11;
+		double t135 = -2.0*t20*t5;
+		double t138 = -2.0*t36*t15;
+		double t141 = -2.0*t24*t5;
+		double t144 = -2.0*t44*t15;
+		double t153 = -2.0*t60*t5;
+		double t156 = -2.0*t64*t15;
+		double t162 = 0.1E1*t57*t24;
+		double t164 = 0.1E1*t10*t60;
+		double t177 = 2.0*t20*t1;
+		double t180 = 2.0*t24*t1;
+		double t187 = 2.0*t60*t1;
+		double t200 = 2.0*t20*t3;
+		double t203 = 2.0*t24*t3;
+		double t210 = 2.0*t60*t3;
+		double t223 = 2.0*t20*t5;
+		double t226 = 2.0*t24*t5;
+		double t233 = 2.0*t60*t5;
+		double t246 = 2.0*t36*t11;
+		double t249 = 2.0*t44*t11;
+		double t256 = 2.0*t64*t11;
+		double t269 = 2.0*t36*t13;
+		double t272 = 2.0*t44*t13;
+		double t279 = 2.0*t64*t13;
+		double t292 = 2.0*t36*t15;
+		double t295 = 2.0*t44*t15;
+		double t302 = 2.0*t64*t15;
+      vgx[0] = K*(t22-t26-t27*(-0.5*t30*t31-0.5*t10*t37+0.5*t40*t41+0.5*t23*t45
+)-t50*(0.5*t51*t31+t56+0.5*t57*t37-0.5*t40*t61-0.5*t23*t65-t69)-t72*(-0.5*t51*
+t41-t76-0.5*t57*t45+0.5*t30*t61+0.5*t10*t65+t84));
+      vgx[1] = K*(-t27*(-0.5*t30*t89-t56-0.5*t10*t92+0.5*t40*t95+0.5*t23*t98+
+t69)-t104+t106-t50*(0.5*t51*t89+0.5*t57*t92-0.5*t40*t111-0.5*t23*t114)-t72*(
+-0.5*t51*t95-0.5*t57*t98-t124+0.5*t30*t111+t128+0.5*t10*t114));
+      vgx[2] = K*(-t27*(-0.5*t30*t135-0.5*t10*t138-t84+0.5*t40*t141+t76+0.5*t23
+*t144)-t50*(0.5*t51*t135+0.5*t57*t138+t124-0.5*t40*t153-t128-0.5*t23*t156)+t162
+-t164-t72*(-0.5*t51*t141-0.5*t57*t144+0.5*t30*t153+0.5*t10*t156));
+      vgx[3] = K*(-t27*(-0.5*t30*t177+0.5*t40*t180)-t50*(0.5*t51*t177-t56-0.5*
+t40*t187)-t72*(-0.5*t51*t180+t76+0.5*t30*t187));
+      vgx[4] = K*(-t27*(-0.5*t30*t200+t56+0.5*t40*t203)-t50*(0.5*t51*t200-0.5*
+t40*t210)-t72*(-0.5*t51*t203+0.5*t30*t210-t128));
+      vgx[5] = K*(-t27*(-0.5*t30*t223+0.5*t40*t226-t76)-t50*(0.5*t51*t223-0.5*
+t40*t233+t128)-t72*(-0.5*t51*t226+0.5*t30*t233));
+      vgx[6] = K*(-t27*(-0.5*t10*t246+0.5*t23*t249)-t50*(0.5*t57*t246-0.5*t23*
+t256+t69)-t72*(-0.5*t57*t249+0.5*t10*t256-t84));
+      vgx[7] = K*(-t27*(-0.5*t10*t269+0.5*t23*t272-t69)-t50*(0.5*t57*t269-0.5*
+t23*t279)-t72*(-0.5*t57*t272+t124+0.5*t10*t279));
+      vgx[8] = K*(-t27*(-0.5*t10*t292+t84+0.5*t23*t295)-t50*(0.5*t57*t292-t124
+-0.5*t23*t302)-t72*(-0.5*t57*t295+0.5*t10*t302));
+      vgx[9] = K*(-t22+t26);
+      vgx[10] = K*(t104-t106);
+      vgx[11] = K*(-t162+t164);

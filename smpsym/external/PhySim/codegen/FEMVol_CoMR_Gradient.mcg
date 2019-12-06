@@ -1,0 +1,55 @@
+		double t3 = Fv[0]*Fv[0];
+		double t4 = Fv[1]*Fv[1];
+		double t5 = Fv[2]*Fv[2];
+		double t6 = Fv[3]*Fv[3];
+		double t7 = Fv[4]*Fv[4];
+		double t8 = Fv[5]*Fv[5];
+		double t9 = Fv[6]*Fv[6];
+		double t10 = Fv[7]*Fv[7];
+		double t11 = Fv[8]*Fv[8];
+		double t12 = t3+t4+t5+t6+t7+t8+t9+t10+t11;
+		double t14 = t3+t6+t9;
+		double t19 = Fv[0]*Fv[1]+Fv[3]*Fv[4]+Fv[7]*Fv[6];
+		double t24 = Fv[0]*Fv[2]+Fv[3]*Fv[5]+Fv[8]*Fv[6];
+		double t30 = Fv[0]*Fv[8];
+		double t32 = Fv[0]*Fv[7];
+		double t34 = Fv[1]*Fv[3];
+		double t36 = Fv[6]*Fv[1];
+		double t38 = Fv[2]*Fv[3];
+		double t40 = Fv[2]*Fv[4];
+		double t42 = t30*Fv[4]-t32*Fv[5]-t34*Fv[8]+t36*Fv[5]+t38*Fv[7]-t40*Fv[6];
+		double t43 = 1/t42;
+		double t44 = (mr10+2.0*mr01)*t43;
+		double t47 = Fv[4]*Fv[8]-Fv[5]*Fv[7];
+		double t50 = t42*t42;
+		double t51 = log(t50);
+		double t52 = bulk*t51;
+		double t61 = t4+t7+t10;
+		double t66 = Fv[1]*Fv[2]+Fv[4]*Fv[5]+Fv[7]*Fv[8];
+		double t72 = -Fv[8]*Fv[3]+Fv[5]*Fv[6];
+		double t84 = t5+t8+t11;
+		double t90 = Fv[7]*Fv[3]-Fv[4]*Fv[6];
+		double t107 = -Fv[1]*Fv[8]+Fv[2]*Fv[7];
+		double t123 = -Fv[6]*Fv[2]+t30;
+		double t138 = -t32+t36;
+		double t154 = Fv[5]*Fv[1]-t40;
+		double t170 = -Fv[5]*Fv[0]+t38;
+		double t186 = Fv[4]*Fv[0]-t34;
+      vgx[0] = 2.0*mr10*Fv[0]+4.0*mr01*(t12*Fv[0]-t14*Fv[0]-t19*Fv[1]-t24*Fv[2]
+)-2.0*t44*t47+0.5*t52*t43*t47;
+      vgx[1] = 2.0*mr10*Fv[1]+4.0*mr01*(t12*Fv[1]-t19*Fv[0]-t61*Fv[1]-t66*Fv[2]
+)-2.0*t44*t72+0.5*t52*t43*t72;
+      vgx[2] = 2.0*mr10*Fv[2]+4.0*mr01*(t12*Fv[2]-t24*Fv[0]-t66*Fv[1]-t84*Fv[2]
+)-2.0*t44*t90+0.5*t52*t43*t90;
+      vgx[3] = 2.0*mr10*Fv[3]+4.0*mr01*(t12*Fv[3]-t14*Fv[3]-t19*Fv[4]-t24*Fv[5]
+)-2.0*t44*t107+0.5*t52*t43*t107;
+      vgx[4] = 2.0*mr10*Fv[4]+4.0*mr01*(t12*Fv[4]-t19*Fv[3]-t61*Fv[4]-t66*Fv[5]
+)-2.0*t44*t123+0.5*t52*t43*t123;
+      vgx[5] = 2.0*mr10*Fv[5]+4.0*mr01*(t12*Fv[5]-t24*Fv[3]-t66*Fv[4]-t84*Fv[5]
+)-2.0*t44*t138+0.5*t52*t43*t138;
+      vgx[6] = 2.0*mr10*Fv[6]+4.0*mr01*(t12*Fv[6]-t14*Fv[6]-t19*Fv[7]-t24*Fv[8]
+)-2.0*t44*t154+0.5*t52*t43*t154;
+      vgx[7] = 2.0*mr10*Fv[7]+4.0*mr01*(t12*Fv[7]-t19*Fv[6]-t61*Fv[7]-t66*Fv[8]
+)-2.0*t44*t170+0.5*t52*t43*t170;
+      vgx[8] = 2.0*mr10*Fv[8]+4.0*mr01*(t12*Fv[8]-t24*Fv[6]-t66*Fv[7]-t84*Fv[8]
+)-2.0*t44*t186+0.5*t52*t43*t186;

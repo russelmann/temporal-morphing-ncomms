@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<scene version="0.5.0">
+	<!-- <integrator type="path">
+		<integer name="maxDepth" value="16"/>
+	</integrator> -->
+	<integrator type="adaptive">
+		<integrator type="irrcache">
+			<integrator type="path">
+				<integer name="maxDepth" value="16"/>
+			</integrator>
+		</integrator>
+	</integrator>
+	<!--  Instantiate  a  perspective  camera  with  45  degrees  field  of  view  -->
+
+	<sensor type="perspective">
+		<float name="focusDistance" value="384.035"/>
+		<float name="fov" value="39.3201"/>
+		<string name="fovAxis" value="x"/>
+		<transform name="toWorld">
+			<lookat target="3000, 1000, 900" origin="3000, 1100, 1100" up="0, 1, 0"/>
+		</transform>
+
+		<sampler type="independent">
+			<integer name="sampleCount" value="256"/>
+		</sampler>
+
+		<film type="hdrfilm">
+			<integer name="width" value="320"/> <!-- 1280 -->
+			<integer name="height" value="240"/> <!-- 720 -->
+			<rfilter type="gaussian"/>
+			<boolean name="banner" value="false"/>
+		</film>
+		<!-- <film type="hdrfilm">
+			<integer name="height" value="600"/>
+			<integer name="width" value="800"/>
+
+			<rfilter type="gaussian"/>
+		</film> -->
+	</sensor>
+	<!-- Lights -->
+
+	<shape type="rectangle">
+		<transform name="toWorld">
+			<scale x="750" y="75"/>
+			<rotate x="1" angle="90"/>
+			<translate x="4500" y="3200" z="800"/>
+		</transform>
+    
+		<emitter type="area">
+			<spectrum name="radiance" value="5"/>
+		</emitter>
+	</shape>
+
+	<shape type="rectangle">
+		<transform name="toWorld">
+			<scale x="750" y="75"/>
+			<rotate x="1" angle="90"/>
+			<translate x="1500" y="3200" z="800"/>
+		</transform>
+
+		<emitter type="area">
+			<spectrum name="radiance" value="5"/>
+		</emitter>
+	</shape>
+
+	<emitter type="spot">
+		<transform name="toWorld">
+
+			<lookat target="3000, 1000, 800" origin="4000, 1800, 2000"/>
+		</transform>
+		<spectrum name="intensity" value="150000"/>
+	</emitter>
+
+	<emitter type="spot">
+		<transform name="toWorld">
+
+			<lookat target="3000, 1000, 800" origin="2000, 1800, 2000"/>
+		</transform>
+		<spectrum name="intensity" value="150000"/>
+	</emitter>
+
+	<emitter type="point">
+		<point name="position" x="2600" y="1300" z="1300"/>
+		<spectrum name="intensity" value="500000"/>
+	</emitter>
+	<!-- Room -->
+
+	<shape type="cube">
+		<transform name="toWorld">
+			<translate x="1.0" y="1.0" z="1.0"/>
+			<scale x="3000" y="1800" z="1500"/>
+		</transform>
+		<boolean name="flipNormals" value="true"/>
+
+		<bsdf type="diffuse">
+			<srgb name="reflectance" value="1.0, 1.0, 1.0"/>
+		</bsdf>
+	</shape>
+	<!-- Table -->
+
+	<shape type="cube">
+		<transform name="toWorld">
+			<scale x="1800" y="50" z="1000"/>
+			<translate x="2965" y="910.314" z="804.191"/>
+		</transform>
+
+		<bsdf type="diffuse">
+			<srgb name="reflectance" value="1.0, 1.0, 1.0"/>
+		</bsdf>
+	</shape>
+
+</scene>
