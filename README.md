@@ -2,6 +2,10 @@
 
 Code and data for research paper Guseinov, R. et al. Programming temporal morphing of self-actuated shells. *Nature Communications* (2019).
 
+### Abstract
+
+Advances in shape-morphing materials, such as hydrogels, shape-memory polymers and light-responsive polymers have enabled prescribing self-directed deformations of initially flat geometries. However, most proposed solutions evolve towards a target geometry without considering time-dependent actuation paths. To achieve more complex geometries and avoid self-collisions, it is critical to encode a spatial and temporal shape evolution within the initially flat shell. Recent realizations of time-dependent morphing are limited to the actuation of few, discrete hinges and cannot form doubly curved surfaces. Here, we demonstrate a method for encoding temporal shape evolution in architected shells that assume complex shapes and doubly curved geometries. The shells are non-periodic tessellations of pre-stressed contractile unit cells that soften in water at rates prescribed locally by mesostructure geometry. The ensuing midplane contraction is coupled to the formation of encoded curvatures. We propose an inverse design tool based on a data-driven model for unit cells' temporal responses.
+
 ## Contents
 
 * Folder **extra**: Processing and modeling for unit cells and shells. Plotting.
@@ -16,6 +20,8 @@ Code and data for research paper Guseinov, R. et al. Programming temporal morphi
 * Folder **smpsym**: Inverse design and simulation tool. (N.B.: for experienced C++ users only!)
 
 ## Inverse design and simulation tool (smpsym)
+
+This code is tested only with MSVC 2017, but developed in a compatible way with gcc and Clang compilers.
 
 ### Requirements
 
