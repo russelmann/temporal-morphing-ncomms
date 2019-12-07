@@ -81,7 +81,7 @@ namespace PhySim
 		virtual const int& NumRigidDoF() const { return this->m_numRigidDoF; }
 		virtual const int& NumOtherDoF() const { return this->m_numOtherDoF; }
 
-		IModel::StateP Model_Reduction_RBCloud::CreateState(Space s) const;
+		IModel::StateP CreateState(Space s) const;
 		bool HasState(IModel::StateP pS, Space s) const;
 		void GetState(IModel::StateP pS, Space s) const;
 		void SetState(const IModel::StateP pS, Space s);

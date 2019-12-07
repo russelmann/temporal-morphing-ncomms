@@ -27,7 +27,8 @@ Code and data for research paper Guseinov, R. et al. Programming temporal morphi
 
 ### Optional
 
-* geogram (for generation of triangulated stencil from input shape geometry)
+* geogram (for generation of triangulated stencils)
+    https://github.com/alicevision/geogram
 
 * integration with Matlab (for plotting)
 

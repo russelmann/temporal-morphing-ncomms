@@ -14,9 +14,9 @@ set( CMAKE_BUILD_TYPE Release )
 
 project( SmpApp )
 
-option(WITH_MATLAB "Use matlab engine" ON)
+option(WITH_MATLAB "Use matlab engine" OFF)
 option(WITH_BOOST "Use boost" OFF)
-option(WITH_GEOGRAM "Use Geogram remesher" ON)
+option(WITH_GEOGRAM "Use Geogram remesher" OFF)
 
 include (${CMAKE_CURRENT_SOURCE_DIR}/CMakeLocal.txt)
 

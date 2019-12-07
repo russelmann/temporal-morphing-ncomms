@@ -1,1 +1,0 @@
-set(EIGEN3_DIR "c:/sdk/eigen3")

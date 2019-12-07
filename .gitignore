@@ -1,2 +1,6 @@
 smpsym/build/
 smpsym/assets/imgui.ini
+smpsym/.idea
+smpsym/cmake-build-debug
+smpsym/cmake-build-release
+CMakeLocal.txt
