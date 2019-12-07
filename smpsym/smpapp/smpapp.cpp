@@ -43,7 +43,7 @@ void SmpApp::setup()
 
 	// Initialize variables
 	
-	auto asset_dir = app::loadAsset("smp_anchor")->getFilePath().parent_path();
+	filesystem::path asset_dir = app::loadAsset("smp_anchor")->getFilePath().parent_path().c_str();
 	mCoreSettings = make_shared<CoreSettings>(asset_dir);
 	mCoreSettings->serialization();
 	mTimestep = mCoreSettings->timestep;
