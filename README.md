@@ -1,6 +1,6 @@
 # Programming temporal morphing of self-actuated shells
 
-Code and data for research paper Guseinov, R. et al. Programming temporal morphing of self-actuated shells. *Nature Communications* (2019).
+Code and data for research paper Guseinov, R. et al. Programming temporal morphing of self-actuated shells. *Nature Communications* (2020).
 
 ### Abstract
 
