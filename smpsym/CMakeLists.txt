@@ -187,7 +187,9 @@ add_dependencies(${PROJECT_NAME} cetm)
 target_link_libraries( SmpApp PRIVATE PhySim )
 target_link_libraries( SmpApp PRIVATE cetm )
 
-target_compile_options( triangle PUBLIC "/MT$<$<CONFIG:DEBUG>:d>" )
+if( MSVC )
+	target_compile_options( triangle PUBLIC "/MT$<$<CONFIG:DEBUG>:d>" )
+endif()
 target_link_libraries( SmpApp PUBLIC igl_restricted::triangle )
 
 if ( WITH_GEOGRAM )
