@@ -1,8 +1,0 @@
-{
-    "core_settings": {
-        "num_cores": 4,
-        "openscad_path": "C:/Program Files/OpenSCAD/openscad.exe",
-        "smpup_path": "C:/Research/smpup/source/smpsym/",
-        "time step": 0.5
-    }
-}
