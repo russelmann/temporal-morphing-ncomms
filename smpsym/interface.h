@@ -28,7 +28,7 @@ namespace smpup
 		int num_cores = 4; // Number of cores to use for thread pool
 #ifdef _WIN32
         std::string openscad_path = "C:/Program Files/OpenSCAD/openscad.exe";
-		std::string smpup_path = "C:/Research/smpup/source/smpsym/";
+		std::string smpup_path = filesystem::canonical("../").string();
 #else
         std::string openscad_path = "/Applications/OpenSCAD.app/Contents/MacOS/./OpenSCAD";
         std::string smpup_path = "../../..";
