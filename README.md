@@ -21,15 +21,11 @@ Advances in shape-morphing materials, such as hydrogels, shape-memory polymers a
 
 ## Inverse design and simulation tool (smpsym)
 
-This code is tested only with MSVC 2017, but developed in a compatible way with gcc and Clang compilers.
+This code is tested only with MSVC 2017/2019, but developed in a compatible way with gcc and Clang compilers.
 
 ### Requirements
 
-* cinder (clone git repo, use cmake, build) + Cinder-ImGui
-	https://github.com/cinder/Cinder
-
-* libigl
-	https://github.com/libigl/libigl
+* cinder 0.9.2 (clone git repo, use cmake, build) https://libcinder.org/
 
 ### Optional
 
@@ -38,7 +34,7 @@ This code is tested only with MSVC 2017, but developed in a compatible way with 
 
 * integration with Matlab (for plotting)
 
-### Other dependencies (included in this repository)
+### Other dependencies (included in this repository or fetched)
 
 * cereal
 	https://uscilab.github.io/cereal/
@@ -46,16 +42,19 @@ This code is tested only with MSVC 2017, but developed in a compatible way with 
 * eigen
 	http://eigen.tuxfamily.org/index.php?title=Main_Page
 	
+* libigl
+	https://github.com/libigl/libigl
+	
 ### Build
 
-Before calling cmake, copy file <CMakeLocal-template.txt> as <CMakeLocal.txt> and replace paths
-to the listed libraries in your system (cinder, libigl, etc.). Build the executable.
+Before calling cmake, copy file `CMakeLocal-template.txt` as `CMakeLocal.txt` and replace paths
+to the listed libraries in your system (for example, cinder). Build the executable.
 
 ### Usage
 
 To start editing *actuation time landscape* of a stencil represented by an OBJ file, drag and drop it to the app window.
 Alternatively, to load a simulation file, select in main menu: **File** -> **Load simulation ...** and choose a BIN file, e.g. from folder **shells**.
-Now you can edit *actuation time landscape* and start the simultaion.
+Now you can edit *actuation time landscape* and start the simultaion. Once finished, press button **Simulate** in the main window (in section **Simulation**).
 
 ## License
 This code is free software: you can redistribute it and/or modify
