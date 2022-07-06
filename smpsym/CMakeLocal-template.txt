@@ -1,7 +1,4 @@
-set(CEREAL_DIR "c:/sdk/cereal/include")
 set(CINDER_DIR "c:/sdk/cinder")
-set(LIBIGL_DIR "c:/sdk/libigl")
-set(LIBIGL_BUILD_DIR "c:/sdk/libigl/build")
 
 # Matlab ( optional )
 set(MATLAB_DIR "C:/Program Files/MATLAB/R2018a")

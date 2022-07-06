@@ -14,8 +14,9 @@ set( CMAKE_BUILD_TYPE Release )
 
 project( SmpApp )
 
+list( PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" )
+
 option(WITH_MATLAB "Use matlab engine" OFF)
-option(WITH_BOOST "Use boost" OFF)
 option(WITH_GEOGRAM "Use Geogram remesher" OFF)
 
 include (${CMAKE_CURRENT_SOURCE_DIR}/CMakeLocal.txt)
@@ -24,6 +25,9 @@ set(CEREAL_INCLUDE_DIR "external/cereal/include")
 set(EIGEN3_INCLUDE_DIR "external/eigen")
 set(PHYSIM_INCLUDE_DIR "external/physim/include")
 set(CETM_DIR "external/cetm")
+
+option( LIBIGL_RESTRICTED_TRIANGLE "Build target igl_restricted::triangle" ON )
+include( libigl )
 
 if ( WIN32 )
 	set ( LIB_PREFIX "" )
@@ -111,9 +115,6 @@ file( GLOB SOURCES
 
 set ( INCLUDES
 	${EIGEN3_INCLUDE_DIR}
-	${LIBIGL_DIR}/include
-	${LIBIGL_DIR}/include/igl/copyleft
-	${LIBIGL_DIR}/external/triangle
     ${CETM_DIR}/include
     ${PHYSIM_INCLUDE_DIR}
 	${CEREAL_INCLUDE_DIR}
@@ -186,25 +187,10 @@ add_dependencies(${PROJECT_NAME} cetm)
 target_link_libraries( SmpApp PRIVATE PhySim )
 target_link_libraries( SmpApp PRIVATE cetm )
 
-target_link_libraries( SmpApp PRIVATE debug ${LIBIGL_BUILD_DIR}/lib/Debug/${LIB_PREFIX}triangle.${LIB_SUFFFIX} )
-target_link_libraries( SmpApp PRIVATE optimized ${LIBIGL_BUILD_DIR}/lib/Release/${LIB_PREFIX}triangle.${LIB_SUFFFIX} )
+target_compile_options( triangle PUBLIC "/MT$<$<CONFIG:DEBUG>:d>" )
+target_link_libraries( SmpApp PUBLIC igl_restricted::triangle )
 
 if ( WITH_GEOGRAM )
 	target_link_libraries( SmpApp PRIVATE debug ${GEOGRAM_LIB_DEBUG}/${LIB_PREFIX}geogram.${LIB_SUFFFIX})
 	target_link_libraries( SmpApp PRIVATE optimized ${GEOGRAM_LIB_RELEASE}/${LIB_PREFIX}geogram.${LIB_SUFFFIX})
 endif()
-
-# Boost
-if ( WITH_BOOST )
-	add_definitions(-DUSE_BOOST)
-    
-    set(boost_min_ver 1.50.0)
-    set(boost_libs system filesystem)
-    find_package(Boost ${boost_min_ver})
-
-    if(Boost_FOUND)
-        find_package(Boost ${boost_min_ver} COMPONENTS ${boost_libs})
-    endif()
-
-    target_link_libraries(SmpApp PRIVATE ${Boost_LIBRARIES})
-endif ( WITH_BOOST )

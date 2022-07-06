@@ -20,6 +20,7 @@
 #include "igl/boundary_facets.h"
 #include "igl/unique.h"
 #include "igl/per_vertex_normals.h"
+#include "igl/per_face_normals.h"
 #include "igl/triangle_triangle_adjacency.h"
 
 namespace smpup

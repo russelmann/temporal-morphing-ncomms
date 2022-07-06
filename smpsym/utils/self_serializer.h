@@ -17,13 +17,9 @@
 
 #include "smp_addons.h"
 
-#ifdef USE_BOOST
-#include "boost/filesystem.hpp"
-namespace filesystem = boost::filesystem;
-#else
 #include <filesystem>
+
 namespace filesystem = std::filesystem;
-#endif
 
 namespace cereal
 {
