@@ -50,7 +50,7 @@ namespace smpup {
 			Eigen::MatrixXd V;
 			Eigen::MatrixXi F;
 			Eigen::MatrixXd N;
-			igl::readSTL(stlname, V, F, N);
+			igl::readSTL(std::ifstream(stlname), V, F, N);
 			std::remove(stlname.c_str());
 
 			V.col(0).array() += i * 50;

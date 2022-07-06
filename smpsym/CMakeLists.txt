@@ -1,7 +1,7 @@
 cmake_minimum_required( VERSION 3.6 FATAL_ERROR )
 set( CMAKE_VERBOSE_MAKEFILE ON )
 
-set( CMAKE_CXX_STANDARD 14 )
+set( CMAKE_CXX_STANDARD 17 )
 
 if ( WIN32 )
 	add_definitions(/bigobj)
@@ -174,7 +174,6 @@ ci_make_app(
     SOURCES     ${SOURCES}
     INCLUDES    ${APP_PATH}/include ${INCLUDES}
 	LIBRARIES   ${LIBRARIES}
-	BLOCKS      Cinder-ImGui
 )
 
 target_compile_definitions(SmpApp PRIVATE
@@ -184,15 +183,15 @@ target_compile_definitions(SmpApp PRIVATE
 add_dependencies(${PROJECT_NAME} PhySim)
 add_dependencies(${PROJECT_NAME} cetm)
 
-target_link_libraries( SmpApp PhySim )
-target_link_libraries( SmpApp cetm )
+target_link_libraries( SmpApp PRIVATE PhySim )
+target_link_libraries( SmpApp PRIVATE cetm )
 
-target_link_libraries( SmpApp debug ${LIBIGL_BUILD_DIR}/Debug/${LIB_PREFIX}triangle.${LIB_SUFFFIX} )
-target_link_libraries( SmpApp optimized ${LIBIGL_BUILD_DIR}/Release/${LIB_PREFIX}triangle.${LIB_SUFFFIX} )
+target_link_libraries( SmpApp PRIVATE debug ${LIBIGL_BUILD_DIR}/lib/Debug/${LIB_PREFIX}triangle.${LIB_SUFFFIX} )
+target_link_libraries( SmpApp PRIVATE optimized ${LIBIGL_BUILD_DIR}/lib/Release/${LIB_PREFIX}triangle.${LIB_SUFFFIX} )
 
 if ( WITH_GEOGRAM )
-	target_link_libraries( SmpApp debug ${GEOGRAM_LIB_DEBUG}/${LIB_PREFIX}geogram.${LIB_SUFFFIX})
-	target_link_libraries( SmpApp optimized ${GEOGRAM_LIB_RELEASE}/${LIB_PREFIX}geogram.${LIB_SUFFFIX})
+	target_link_libraries( SmpApp PRIVATE debug ${GEOGRAM_LIB_DEBUG}/${LIB_PREFIX}geogram.${LIB_SUFFFIX})
+	target_link_libraries( SmpApp PRIVATE optimized ${GEOGRAM_LIB_RELEASE}/${LIB_PREFIX}geogram.${LIB_SUFFFIX})
 endif()
 
 # Boost
@@ -207,5 +206,5 @@ if ( WITH_BOOST )
         find_package(Boost ${boost_min_ver} COMPONENTS ${boost_libs})
     endif()
 
-    target_link_libraries(SmpApp ${Boost_LIBRARIES})
+    target_link_libraries(SmpApp PRIVATE ${Boost_LIBRARIES})
 endif ( WITH_BOOST )

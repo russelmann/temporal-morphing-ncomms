@@ -15,8 +15,10 @@
 #ifndef SMP_IMGUI_H
 #define SMP_IMGUI_H
 
-#include "CinderImGui.h"
+#include "cinder/CinderImGui.h"
 #include <string>
+
+namespace ui = ImGui;
 
 void tooltip(std::string tip);
 void CheckboxEx(const char* label, bool* v, bool read_only);

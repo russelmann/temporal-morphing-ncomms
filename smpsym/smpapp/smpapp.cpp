@@ -13,7 +13,9 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #include "smpapp.h"
-#include "CinderImGui.h"
+#include "cinder/CinderImGui.h"
+
+namespace ui = ImGui;
 
 void prepareSettings( App::Settings* settings )
 {
@@ -81,7 +83,7 @@ void SmpApp::setup()
 	mTimeLandscapeRadius = 50;
 	mTimeLandscapeIncrement = 3;
 
-	ui::initialize();
+	ui::Initialize();
 
 	clog.rdbuf(buf_console.rdbuf());
 

@@ -28,7 +28,7 @@
 #include "cinder/Log.h"
 #include "cinder/app/Platform.h"
 
-#include "CinderImGui.h"
+#include "cinder/CinderImGui.h"
 
 using namespace ci;
 using namespace ci::app;

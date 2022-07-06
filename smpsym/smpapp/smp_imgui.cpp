@@ -16,12 +16,14 @@
 
 #include "igl/writeOBJ.h"
 
-#include "imgui_internal.h"
+#include "imgui/imgui_internal.h"
 
 using namespace ci;
 using namespace ci::app;
 using namespace std;
 using namespace smpup;
+
+namespace ui = ImGui;
 
 void tooltip(string tip)
 {

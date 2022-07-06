@@ -16,7 +16,7 @@
 #define SMP_IMGUI_HANDLER_H
 
 #include "interface.h"
-#include "CinderImGui.h"
+#include "cinder/CinderImGui.h"
 
 using namespace smpup;
 
