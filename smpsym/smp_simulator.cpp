@@ -788,7 +788,16 @@ namespace smpup
 			Eigen::MatrixXd bc(b.size(), 3);
 			for (int i = 0; i < b.size(); ++i)
 				bc.row(i) = bracket_vertices.row(b(i)) * finfo->body_rotation[bracket_body_index(b(i))].transpose() + finfo->body_centroids.row(bracket_body_index(b(i)));
-			Eigen::MatrixXd U = frame_info.back()->bracket_vertices.cast<double>();
+			// Find any prior deformation of visualized brackets.
+			Eigen::MatrixXd U;
+			for (int i = frame_info.size() - 1; i >= 0; --i) {
+				if (0 < frame_info[i]->bracket_vertices.size()) {
+					U = frame_info[i]->bracket_vertices.cast<double>();
+					break;
+				}
+			}
+			if (U.size() == 0)
+				U = bracket_vertices.cast<double>();
 			igl::arap_solve(bc, arap_data, U);
 			finfo->bracket_vertices = U.cast<float>();
 		}
