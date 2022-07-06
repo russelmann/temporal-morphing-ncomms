@@ -4,3 +4,4 @@ smpsym/.idea
 smpsym/cmake-build-debug
 smpsym/cmake-build-release
 CMakeLocal.txt
+smpsym/assets/core_settings.json
